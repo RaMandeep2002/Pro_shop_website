@@ -163,7 +163,12 @@ input[type=search] {
     font-size: 50px;
     color: #fff;
     text-shadow: 2px 2px 4px #000;
-    animation: fadeInAnimation ease 3s;
+    overflow: hidden;
+    /* border-right: .15em solid orange; */
+    white-space: nowrap;
+    animation:
+        typing 3s forwards;
+
 }
 
 .center_container .text_area p {
@@ -172,7 +177,17 @@ input[type=search] {
     margin-top: -35px;
     color: #fff;
     text-shadow: 2px 2px 4px #000;
-    animation: fadeInAnimation ease-in 3s;
+
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
 }
 
 .center_container a {
